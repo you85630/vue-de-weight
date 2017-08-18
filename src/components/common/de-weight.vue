@@ -1,5 +1,6 @@
 <template>
   <div class="de-weight">
+    <h2>去重：</h2>
     <div class="left">
       <dl v-for="dl in left" :key="dl.index">
         <dt @click="addli(dl)">{{dl.name}}</dt>
@@ -52,7 +53,7 @@ export default {
   }
   .right {
     li {
-      padding: 10px;
+      padding: 10px 0;
     }
   }
 }
