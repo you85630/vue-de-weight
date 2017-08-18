@@ -3,20 +3,15 @@ export default {
   state: {
     left: [
       {
-        name: 'one',
-        link: '1-1'
+        name: 'one'
       }, {
-        name: 'two',
-        link: '1-2'
+        name: 'two'
       }, {
-        name: 'three',
-        link: '1-3'
+        name: 'three'
       }, {
-        name: 'four',
-        link: '1-4'
+        name: 'four'
       }, {
-        name: 'five',
-        link: '1-5'
+        name: 'five'
       }
     ],
     right: []
