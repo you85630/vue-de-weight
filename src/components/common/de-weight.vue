@@ -32,11 +32,12 @@ export default {
 
 <style lang="scss" scoped>
 .de-weight {
-  margin-top: 10px;
+  padding: 10px;
   .left {
+    margin-top: 10px;
     dl {
       display: inline-block;
-      margin: 0 10px;
+      margin-right: 10px;
       background-color: #f60;
       color: #fff;
       line-height: 1;
