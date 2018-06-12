@@ -25,9 +25,7 @@ export default {
   methods: {
     addli (key) {
       this.right.push(key)
-      let set = new Set(this.right)
-      let newArr = Array.from(set)
-      this.right = newArr
+      this.right = [...new Set(this.right)]
     }
   }
 }
