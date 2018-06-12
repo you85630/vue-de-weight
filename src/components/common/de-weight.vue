@@ -3,30 +3,32 @@
     <h2>去重：</h2>
     <div class="left">
       <dl v-for="dl in left" :key="dl.index">
-        <dt @click="addli(dl)">{{dl.name}}</dt>
+        <dt @click="addli(dl)">{{dl}}</dt>
       </dl>
     </div>
     <div class="right">
       <ul>
-        <li v-for="li in right" :key="li.index">{{li.name}}</li>
+        <li v-for="li in right" :key="li.index">{{li}}</li>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
 export default {
-  computed: {
-    ...mapGetters([
-      'left',
-      'right'
-    ])
+  data () {
+    return {
+      left: ['one', 'two', 'three', 'four', 'five'],
+      right: []
+    }
   },
   methods: {
-    ...mapActions([
-      'addli'
-    ])
+    addli (key) {
+      this.right.push(key)
+      let set = new Set(this.right)
+      let newArr = Array.from(set)
+      this.right = newArr
+    }
   }
 }
 </script>
@@ -53,9 +55,8 @@ export default {
   }
   .right {
     li {
-      padding: 10px 0;
+      padding-top: 5px;
     }
   }
 }
 </style>
-
